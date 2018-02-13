@@ -1,5 +1,7 @@
 # Homework Assignment 8
 
+[![Build Status](https://travis-ci.com/PGE383-HPC/assignment8.svg?token=SnMGq692xXXqxzyE6QSj&branch=master)](https://travis-ci.com/PGE383-HPC/assignment8)
+
 Open the [Assignment 8 Jupyter Notebook](assignment8.ipynb) and follow the instructions.
 
 ## Testing
