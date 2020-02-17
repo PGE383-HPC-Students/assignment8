@@ -9,12 +9,10 @@ install:
   - hash -r
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
-  - conda info -a
-  - conda install numpy scipy nbconvert ipython
+  - conda env create -f environment.yml
+  - source $(conda info --root)/etc/profile.d/conda.sh
+  - conda activate $ASSIGNMENT
   - "curl -H \"Authorization: token ${GH_TOKEN}\" -H 'Accept: application/vnd.github.v3.raw' -O --location \"https://api.github.com/repos/PGE383-HPC/${ASSIGNMENT}/contents/test.py\""
   - "curl -H \"Authorization: token ${GH_TOKEN}\" -H 'Accept: application/vnd.github.v3.raw' -O --location \"https://api.github.com/repos/PGE383-HPC/${ASSIGNMENT}/contents/data_private.dat\""
 script:
-  - 'if [ ! -f "./${ASSIGNMENT}.py" ]; then
-        jupyter nbconvert --to python ${ASSIGNMENT}.ipynb;
-     fi'
   - python test.py

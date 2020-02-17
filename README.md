@@ -6,12 +6,10 @@ Open the [Assignment 8 Jupyter Notebook](assignment8.ipynb) and follow the instr
 
 ## Testing
 
-If you would like to check to see if your solution is correct, run the following commands at the Terminal command line in sequence:
+If you would like to check to see if your solution is correct, run the following command at the Terminal command:
 
 ```bash
->jupyter nbconvert --to python assignment8.ipynb
+>python test.py
 ```
 
-```bash
->nose2
-```
+A status message of `OK` indicates your solution is correct.

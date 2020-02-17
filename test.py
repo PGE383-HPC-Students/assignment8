@@ -1,8 +1,18 @@
 #!/usr/bin/env python
 
+import unittest
+import nbconvert
+import os
 
 import numpy as np
-import unittest
+
+with open("assignment8.ipynb") as f:
+    exporter = nbconvert.PythonExporter()
+    python_file, _ = exporter.from_file(f)
+
+
+with open("assignment8.py", "w") as f:
+    f.write(python_file)
 
 
 from assignment8 import Toughness
